@@ -1,0 +1,8 @@
+print("Имя: Руслан")
+print("Цель: стать QA Automation специалистом")
+print(" ")
+print("Команды, которые я уже умею запускать:")
+print(" 1. python --version")
+print(" 2. python main.py")
+print(" 3. python -m pip install --upgrade pip")
+print("Здарова")
