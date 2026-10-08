@@ -1,0 +1,26 @@
+name: Automated QA Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-autotests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-data: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pytest
+
+      - name: Run Api tests
+        run: |
+          pytest test_api.py -s
